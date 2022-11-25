@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ButtonComponent } from './components/button/button.component';
 import { PigsComponent } from './components/pigs/pigs.component';
 import { PigItemComponent } from './components/pig-item/pig-item.component';
+import { MapComponent } from './components/map/map.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { PigItemComponent } from './components/pig-item/pig-item.component';
     ButtonComponent,
     PigsComponent,
     PigItemComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
