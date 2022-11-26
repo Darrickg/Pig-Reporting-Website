@@ -16,5 +16,7 @@ export class PigItemComponent implements OnInit {
 
   }
 
-
+  toggleDeletePig() {
+    console.log("delete pig button")
+  }
 }
