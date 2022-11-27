@@ -41,12 +41,11 @@ export class MapComponent implements AfterViewInit {
       zoomOffset: -1
     }).addTo(this.map);
 
-    /*
+    
     L.marker([49.2276, -123.0076]).addTo(this.map)
     .bindPopup("<b>Metrotown</b><br />cases reported.").openPopup();
     L.marker([49.1867, -122.8490]).addTo(this.map)
     .bindPopup("<b>SFU Surrey</b><br />cases reported.").openPopup();
-    */
 
   }
 

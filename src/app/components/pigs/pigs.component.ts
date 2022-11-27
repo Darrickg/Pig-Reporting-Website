@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-// TODO: REMOVE THIS LATER, THIS NEEDS TO COME FROM THE API
+// TODO: REMOVE THIS LATER, THIS NEEDS TO COME FROM THE API, ALSO MOVED TO THE SERVICE LMAO
 import {Pig} from '../../Pig';
-import {PIGS} from '../../mock-pigs';
+import { PigService } from '../../services/pig.service'
 
 @Component({
   selector: 'app-pigs',
@@ -11,13 +11,12 @@ import {PIGS} from '../../mock-pigs';
 })
 export class PigsComponent implements OnInit{
   
-  pigs: Pig[] = PIGS;
+  pigs: Pig[] = [];
 
-  constructor() { }
+  constructor(private pigService: PigService) { }
 
   ngOnInit(): void {
-
+    this.pigService.getPigs().subscribe((pigs) => (this.pigs = pigs ));
   }
-
 
 }
