@@ -1,5 +1,4 @@
-<div class="task">
-    <h3>{{pig.name}} <app-button text="Delete" (btnClick)="toggleDeletePig()"></app-button></h3>
-    <p>id: {{pig.pid}}<br>
-    note: {{pig.notes}}</p>
+<div class="pig">
+    <h3>name: {{ pig.data.name }} <app-button text="Delete" (btnClick)="toggleDeletePig()"></app-button></h3>
+    <p>note: {{ pig.data.note }}</p>
 </div>

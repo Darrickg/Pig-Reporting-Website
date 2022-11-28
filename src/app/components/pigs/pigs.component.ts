@@ -16,7 +16,11 @@ export class PigsComponent implements OnInit{
   constructor(private pigService: PigService) { }
 
   ngOnInit(): void {
-    this.pigService.getPigs().subscribe((pigs) => (this.pigs = pigs ));
+    this.pigService.getPigs().subscribe((pigs) => {this.pigs = pigs
+    console.log(this.pigs[0].data)});
+    // this.pigService.getPigs().subscribe((pigs) => console.log(pigs));
+    
+    // console.log(this.pigs);
   }
 
 }

@@ -13,7 +13,7 @@ export class PigItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void { 
-
+    console.log(this.pig);
   }
 
   toggleDeletePig() {

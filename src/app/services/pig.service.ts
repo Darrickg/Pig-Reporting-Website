@@ -16,17 +16,10 @@ export class PigService implements OnInit {
 
   ngOnInit(): void { }
 
-  /*
-  ngOnInit(): void { 
-    this.http.get<Object>('https://https://272.selfip.net/apps/ouUYGVAWQz/collections/pigsData/documents/')
-    .subscribe((data: any)=>{
-      this.pigs = data
-      console.log(this.pigs)
-    })
-  }
-  */
   
   getPigs(): Observable<Pig[]> {
+    console.log("getPigs is running");
+    // console.log(String(this.http.get<Pig[]>(this.apiUrl)));
     return this.http.get<Pig[]>(this.apiUrl);
   }
 }

@@ -1,6 +1,8 @@
 export interface Pig {
-    name: string;
-    pid: number;
-    day: string;
-    notes: string;
+    key: string;
+
+    data: {
+        name: string;
+        note: string;
+    }
 }
