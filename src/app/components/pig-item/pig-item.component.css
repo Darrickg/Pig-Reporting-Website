@@ -14,3 +14,13 @@
 h3, p {
     color: white;
   }
+  
+  .pig.status {
+    border-left: 5px solid green;
+  }
+  
+  .pig h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }

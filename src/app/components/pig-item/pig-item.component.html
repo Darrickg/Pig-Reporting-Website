@@ -1,4 +1,15 @@
 <div class="pig">
-    <h3>name: {{ pig.data.name }} <app-button text="Delete" (btnClick)="onDelete(pig)"></app-button></h3>
-    <p>note: {{ pig.data.note }}</p>
+    <h3>{{ pig.data.pigName }} <app-button text="Delete" (btnClick)="onDelete(pig)"></app-button></h3>
+    <p>
+        info:<br>
+        id: {{ pig.key }}<br>
+        breed: {{ pig.data.pigBreed }}<br>
+        location: {{ pig.data.location }}<br>
+        time: {{ pig.data.time }}<br>
+        note: {{ pig.data.note }}<br><br>
+
+        contact info:<br>
+        name: {{ pig.data.reporterName }}<br>
+        number: {{ pig.data.reporterNum }}
+    </p>
 </div>

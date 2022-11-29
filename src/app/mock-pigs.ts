@@ -1,30 +1,69 @@
 // this is only a mock to test the website, this needs to be in the storage API later!!!!
 
+/* inside data:
+        reporterName: string;
+        reporterNum: string;
+        pigName: string;
+        pigBreed: string;
+        location: string;
+        note: string;
+        time: string;
+        status: boolean;
+*/
+
 import {Pig} from './Pig'
 
 export const PIGS: Pig[] = [
     {
-        name: 'Darrick',
-        pid: 101,
-        day: 'January 1st at 2:30pm',
-        notes: 'he was crying',
+        "key": "100",
+        "data": {
+            "reporterName": "Bobby",
+            "reporterNum": "236-869-4743",
+            "pigName": "Darrick",
+            "pigBreed": "Pot-Bellied",
+            "location": "there",
+            "note": "test data num 1",
+            "time": "today",
+            "status": true
+        }
     },
     {
-        name: 'Nicholas',
-        pid: 102,
-        day: 'January 2nd at 3:30pm',
-        notes: 'he chillin',
+        "key": "101",
+        "data": {
+            "reporterName": "Bobby",
+            "reporterNum": "236-869-4743",
+            "pigName": "Sean",
+            "pigBreed": "Pot-Bellied",
+            "location": "there",
+            "note": "test data num 2",
+            "time": "today",
+            "status": true
+        }
     },
     {
-        name: 'Jennifer',
-        pid: 103,
-        day: 'January 3rd at 4:30pm',
-        notes: 'run for your life',
+        "key": "102",
+        "data": {
+            "reporterName": "Bobby",
+            "reporterNum": "236-869-4743",
+            "pigName": "Jennifer",
+            "pigBreed": "Pot-Bellied",
+            "location": "there",
+            "note": "test data num 3",
+            "time": "today",
+            "status": true
+        }
     },
     {
-        name: 'Justin',
-        pid: 104,
-        day: 'January 4th at 5:30pm',
-        notes: 'his oinks are mumbly',
-    },
+        "key": "103",
+        "data": {
+            "reporterName": "Bobby",
+            "reporterNum": "236-869-4743",
+            "pigName": "Nicholas",
+            "pigBreed": "Pot-Bellied",
+            "location": "there",
+            "note": "test data num 4",
+            "time": "today",
+            "status": true
+        }
+    }
 ]
