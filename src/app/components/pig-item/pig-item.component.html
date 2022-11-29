@@ -1,4 +1,4 @@
 <div class="pig">
-    <h3>name: {{ pig.data.name }} <app-button text="Delete" (btnClick)="toggleDeletePig()"></app-button></h3>
+    <h3>name: {{ pig.data.name }} <app-button text="Delete" (btnClick)="onDelete(pig)"></app-button></h3>
     <p>note: {{ pig.data.note }}</p>
 </div>

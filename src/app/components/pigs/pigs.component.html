@@ -1,1 +1,1 @@
-<app-pig-item *ngFor="let pig of pigs" [pig]="pig"></app-pig-item>
+<app-pig-item *ngFor="let pig of pigs" [pig]="pig" (onDeletePig)="deletePig(pig)"></app-pig-item>

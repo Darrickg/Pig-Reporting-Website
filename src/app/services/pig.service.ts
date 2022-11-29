@@ -18,8 +18,13 @@ export class PigService implements OnInit {
 
   
   getPigs(): Observable<Pig[]> {
-    console.log("getPigs is running");
+    // console.log("getPigs is running");
     // console.log(String(this.http.get<Pig[]>(this.apiUrl)));
     return this.http.get<Pig[]>(this.apiUrl);
+  }
+
+  deletePig(pig: Pig): Observable<Pig> {
+    const url = `${this.apiUrl}/${pig.key}`;
+    return this.http.delete<Pig>(url);
   }
 }

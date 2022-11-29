@@ -23,4 +23,7 @@ export class PigsComponent implements OnInit{
     // console.log(this.pigs);
   }
 
+  deletePig(pig: Pig) {
+    this.pigService.deletePig(pig).subscribe(() => (this.pigs = this.pigs.filter(t => t.key !== pig.key)));
+  }
 }

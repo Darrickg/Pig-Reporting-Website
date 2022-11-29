@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Pig } from 'src/app/Pig';
 
 @Component({
@@ -9,6 +9,7 @@ import { Pig } from 'src/app/Pig';
 export class PigItemComponent implements OnInit {
 
   @Input() pig!: Pig;
+  @Output() onDeletePig: EventEmitter<Pig> = new EventEmitter();
 
   constructor() { }
 
@@ -16,7 +17,8 @@ export class PigItemComponent implements OnInit {
     console.log(this.pig);
   }
 
-  toggleDeletePig() {
-    console.log("delete pig button")
+  onDelete(pig: Pig) {
+    // console.log(pig, "will be deleted")
+    this.onDeletePig.emit(pig);
   }
 }
