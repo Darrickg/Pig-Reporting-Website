@@ -5,6 +5,12 @@ import { Observable } from 'rxjs';
 
 // TODO: this needs to be routed to the API, check the demo code
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -26,5 +32,10 @@ export class PigService implements OnInit {
   deletePig(pig: Pig): Observable<Pig> {
     const url = `${this.apiUrl}/${pig.key}`;
     return this.http.delete<Pig>(url);
+  }
+
+  updatePigStatus(pig: Pig): Observable<Pig> {
+    const url = `${this.apiUrl}/${pig.key}`;
+    return this.http.put<Pig>(url, pig , httpOptions);
   }
 }

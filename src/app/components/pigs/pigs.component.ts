@@ -26,4 +26,10 @@ export class PigsComponent implements OnInit{
   deletePig(pig: Pig) {
     this.pigService.deletePig(pig).subscribe(() => (this.pigs = this.pigs.filter(t => t.key !== pig.key)));
   }
+
+  toggleStatus(pig: Pig) {
+    pig.data.status = !pig.data.status;
+    this.pigService.updatePigStatus(pig).subscribe();
+    // console.log(pig.data.status);
+  }
 }

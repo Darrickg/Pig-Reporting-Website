@@ -10,6 +10,7 @@ export class PigItemComponent implements OnInit {
 
   @Input() pig!: Pig;
   @Output() onDeletePig: EventEmitter<Pig> = new EventEmitter();
+  @Output() onToggleStatus: EventEmitter<Pig> = new EventEmitter();
 
   constructor() { }
 
@@ -20,5 +21,10 @@ export class PigItemComponent implements OnInit {
   onDelete(pig: Pig) {
     // console.log(pig, "will be deleted")
     this.onDeletePig.emit(pig);
+  }
+
+  onToggle(pig: Pig) {
+    // console.log(pig, "will be deleted")
+    this.onToggleStatus.emit(pig);
   }
 }
