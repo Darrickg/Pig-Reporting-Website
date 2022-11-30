@@ -20,7 +20,7 @@ export class AppComponent {
   - change structure of interface of pig
       - add pig id
       - change location
-          - long lat
+          - name, long, lat (maybe make an interface for this)
       - date and time
 
   - make form
