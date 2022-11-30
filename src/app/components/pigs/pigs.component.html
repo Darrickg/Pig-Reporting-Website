@@ -1,13 +1,15 @@
 <table>
-    <tr>
-        <th>Location</th>
-        <th>Reported By</th>
-        <th>Time Reported</th>
-        <th>Status</th>
-        <th>More Info</th>
-        <th>Delete</th>
-    </tr>
-    <tr>
+    <thead>
+        <tr>
+            <th>Location</th>
+            <th>Reported By</th>
+            <th>Time Reported</th>
+            <th>Status</th>
+            <th>More Info</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
         <app-pig-item *ngFor="let pig of pigs" [pig]="pig" (onDeletePig)="deletePig(pig)" (onToggleStatus)="toggleStatus(pig)"></app-pig-item>
-    </tr>
+    </tbody>
 </table>
