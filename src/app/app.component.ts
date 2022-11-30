@@ -26,4 +26,8 @@ export class AppComponent {
   - make form
       - implement routing
       - implement add new location
+
+  - add location to the map
+
+  - add password to delete button
 */
