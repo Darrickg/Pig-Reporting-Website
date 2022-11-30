@@ -8,3 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'CMPT 272 Project';
 }
+
+/*
+  - test
+*/
