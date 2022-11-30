@@ -17,7 +17,7 @@ import { MapComponent } from './components/map/map.component';
     ButtonComponent,
     PigsComponent,
     PigItemComponent,
-    MapComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
