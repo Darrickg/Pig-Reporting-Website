@@ -1,0 +1,38 @@
+<form [formGroup]="pigForm" (ngSubmit)="onSubmit()">
+    <h2>Your Info</h2>
+    <label>
+        Name:
+        <input type="text" formControlName="reporterName">
+    </label>
+
+    <label>
+        Phone Number:
+        <input type="text" formControlName="reporterNum">
+    </label>
+
+    <h2>Pig Info</h2>
+    <label>
+        Name:
+        <input type="text" formControlName="pigName">
+    </label>
+
+    <label>
+        Breed:
+        <select formControlName="pigBreed">
+
+        </select>
+    </label>
+
+    <label>
+        Location:
+        <select formControlName="location">
+
+        </select>
+    </label>
+
+    <label>
+        Note:
+        <input type="text" formControlName="note">
+    </label>
+    <button type="button">Submit</button>
+</form>
