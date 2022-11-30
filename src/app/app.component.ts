@@ -24,8 +24,9 @@ export class AppComponent {
       - date and time
 
   - make form
-      - implement routing
+      - FIXME: implement routing
       - implement add new location
+      - make this work
 
   - add location to the map
 
