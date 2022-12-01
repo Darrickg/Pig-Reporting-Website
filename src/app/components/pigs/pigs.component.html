@@ -10,3 +10,16 @@
 <div class="container">
     <app-pig-item *ngFor="let pig of pigs" [pig]="pig" (onDeletePig)="deletePig(pig)" (onToggleStatus)="toggleStatus(pig)"></app-pig-item>
 </div>
+
+<table>
+    <tr>
+        <th>Location</th>
+        <th>Reported By</th>
+        <th>Pig Name</th>
+    </tr>
+    <tr *ngFor="let pig of pigs">
+        <td>{{ pig.data.location }}</td>
+        <td>{{ pig.data.reporterName }}</td>
+        <td>{{ pig.data.pigName }}</td>
+    </tr>
+</table>

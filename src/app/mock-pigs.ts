@@ -12,6 +12,7 @@
 */
 
 import {Pig} from './Pig'
+import {LOCS} from './mock-locations'
 
 export const PIGS: Pig[] = [
     {
@@ -21,7 +22,8 @@ export const PIGS: Pig[] = [
             "reporterNum": "236-869-4743",
             "pigName": "Darrick",
             "pigBreed": "Pot-Bellied",
-            "location": "there",
+            "pId": "69",
+            "location": LOCS[0],
             "note": "test data num 1",
             "time": "today",
             "status": true
@@ -34,7 +36,8 @@ export const PIGS: Pig[] = [
             "reporterNum": "236-869-4743",
             "pigName": "Sean",
             "pigBreed": "Pot-Bellied",
-            "location": "there",
+            "pId": "420",
+            "location": LOCS[0],
             "note": "test data num 2",
             "time": "today",
             "status": true
@@ -47,7 +50,8 @@ export const PIGS: Pig[] = [
             "reporterNum": "236-869-4743",
             "pigName": "Jennifer",
             "pigBreed": "Pot-Bellied",
-            "location": "there",
+            "pId": "666",
+            "location": LOCS[0],
             "note": "test data num 3",
             "time": "today",
             "status": true
@@ -60,7 +64,8 @@ export const PIGS: Pig[] = [
             "reporterNum": "236-869-4743",
             "pigName": "Nicholas",
             "pigBreed": "Pot-Bellied",
-            "location": "there",
+            "pId": "6969",
+            "location": LOCS[0],
             "note": "test data num 4",
             "time": "today",
             "status": true

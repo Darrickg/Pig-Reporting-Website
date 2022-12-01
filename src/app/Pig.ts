@@ -1,3 +1,5 @@
+import { Loc } from './Loc';
+
 export interface Pig {
     key: string;
 
@@ -11,7 +13,8 @@ export interface Pig {
         reporterNum: string;
         pigName: string;
         pigBreed: string;
-        location: string;
+        pId: string;
+        location: Loc;
         note: string;
         time: string;
         status: boolean;

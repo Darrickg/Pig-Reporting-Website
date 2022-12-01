@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 // TODO: REMOVE THIS LATER, THIS NEEDS TO COME FROM THE API, ALSO MOVED TO THE SERVICE LMAO
 import {Pig} from '../../Pig';
@@ -11,6 +11,9 @@ import { PigService } from '../../services/pig.service'
 })
 export class PigsComponent implements OnInit{
   
+  @Input() pig!: Pig;
+  @Output() onDeletePig: EventEmitter<Pig> = new EventEmitter();
+  @Output() onToggleStatus: EventEmitter<Pig> = new EventEmitter();
   pigs: Pig[] = [];
 
   constructor(private pigService: PigService) { }
