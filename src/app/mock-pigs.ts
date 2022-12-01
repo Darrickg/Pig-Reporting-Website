@@ -12,7 +12,7 @@
 */
 
 import {Pig} from './Pig'
-import {LOCS} from './mock-locations'
+// import {LOCS} from './mock-locations'
 
 export const PIGS: Pig[] = [
     {
@@ -23,7 +23,11 @@ export const PIGS: Pig[] = [
             "pigName": "Darrick",
             "pigBreed": "Pot-Bellied",
             "pId": "69",
-            "location": LOCS[0],
+            "location": {
+                "locName": "Metrotown",
+                "locLat": -123.0076,
+                "locLong": 49.2276
+            },
             "note": "test data num 1",
             "time": "today",
             "status": true
@@ -37,7 +41,11 @@ export const PIGS: Pig[] = [
             "pigName": "Sean",
             "pigBreed": "Pot-Bellied",
             "pId": "420",
-            "location": LOCS[0],
+            "location": {
+                "locName": "Metrotown",
+                "locLat": -123.0076,
+                "locLong": 49.2276
+            },
             "note": "test data num 2",
             "time": "today",
             "status": true
@@ -51,7 +59,11 @@ export const PIGS: Pig[] = [
             "pigName": "Jennifer",
             "pigBreed": "Pot-Bellied",
             "pId": "666",
-            "location": LOCS[0],
+            "location": {
+                "locName": "Metrotown",
+                "locLat": -123.0076,
+                "locLong": 49.2276
+            },
             "note": "test data num 3",
             "time": "today",
             "status": true
@@ -65,7 +77,11 @@ export const PIGS: Pig[] = [
             "pigName": "Nicholas",
             "pigBreed": "Pot-Bellied",
             "pId": "6969",
-            "location": LOCS[0],
+            "location": {
+                "locName": "Metrotown",
+                "locLat": -123.0076,
+                "locLong": 49.2276
+            },
             "note": "test data num 4",
             "time": "today",
             "status": true

@@ -1,0 +1,19 @@
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.yourInfo {
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+
+.pigInfo {
+    padding-left: 5%;
+}
+
+input, select {
+    margin-bottom: 25px;
+}

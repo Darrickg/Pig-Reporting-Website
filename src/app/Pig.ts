@@ -14,7 +14,11 @@ export interface Pig {
         pigName: string;
         pigBreed: string;
         pId: string;
-        location: Loc;
+        location: {
+            locName: string;
+            locLong: number;
+            locLat: number;
+        };
         note: string;
         time: string;
         status: boolean;

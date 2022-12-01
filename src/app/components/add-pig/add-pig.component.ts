@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-pig',
@@ -10,7 +11,7 @@ export class AddPigComponent implements OnInit {
 
   pigForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private router: Router) { }
 
   ngOnInit() {
     this.initialiseForm();
@@ -30,5 +31,6 @@ export class AddPigComponent implements OnInit {
    onSubmit(): void {
     console.log("submit button clicked");
     console.log(this.pigForm);
+    this.router.navigateByUrl('/');
    }
 }

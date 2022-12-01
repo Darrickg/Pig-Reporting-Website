@@ -1,38 +1,45 @@
-<form [formGroup]="pigForm" (ngSubmit)="onSubmit()">
-    <h2>Your Info</h2>
-    <label>
-        Name:
-        <input type="text" formControlName="reporterName">
-    </label>
+<form class="form" [formGroup]="pigForm" (ngSubmit)="onSubmit()">
+    <div class="yourInfo">
+        <h2>Your Info</h2>
+        <label>
+            Name:<br>
+            <input type="text" formControlName="reporterName"><br>
+        </label>
 
-    <label>
-        Phone Number:
-        <input type="text" formControlName="reporterNum">
-    </label>
+        <label>
+            Phone Number:<br>
+            <input type="text" formControlName="reporterNum">
+        </label><br>
+        <app-button text="submit" (btnClick)="onSubmit()"></app-button>
+    </div>
 
-    <h2>Pig Info</h2>
-    <label>
-        Name:
-        <input type="text" formControlName="pigName">
-    </label>
+    <div class="pigInfo">
+        <h2>Pig Info</h2>
+        <label>
+            Name:<br>
+            <input type="text" formControlName="pigName"><br>
+        </label>
 
-    <label>
-        Breed:
-        <select formControlName="pigBreed">
+        <label>
+            Breed:<br>
+            <select formControlName="pigBreed">
+                <option value="Yorkshire">Yorkshire</option>
+                <option value="Pork-Bellied">Pork-Bellied</option>
+                <option value="Porkchop">Porkchop</option>
+                <option value="Unknown">Unknown</option>
+            </select><br>
+        </label>
 
-        </select>
-    </label>
+        <label>
+            Location:<br>
+            <select formControlName="location">
 
-    <label>
-        Location:
-        <select formControlName="location">
+            </select><br>
+        </label>
 
-        </select>
-    </label>
-
-    <label>
-        Note:
-        <input type="text" formControlName="note">
-    </label>
-    <button type="button">Submit</button>
+        <label>
+            Note:<br>
+            <input type="text" formControlName="note"><br>
+        </label>
+    </div>
 </form>

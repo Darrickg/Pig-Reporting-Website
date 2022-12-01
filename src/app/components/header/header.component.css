@@ -1,10 +1,16 @@
 .header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
-    margin-bottom: 20px;
+    justify-content: center;
+    padding-top: 25px;
   }
 
   h1 {
     color: white;
+    padding-right: 50px;
+  }
+
+  app-button {
+    padding-left: 50px;
   }
