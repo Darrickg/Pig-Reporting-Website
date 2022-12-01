@@ -15,11 +15,16 @@
     <tr>
         <th>Location</th>
         <th>Reported By</th>
-        <th>Pig Name</th>
+        <th>Time Reported</th>
+        <th>Status</th>
+        <th></th>
+        <th></th>
     </tr>
     <tr *ngFor="let pig of pigs">
         <td>{{ pig.data.location }}</td>
         <td>{{ pig.data.reporterName }}</td>
-        <td>{{ pig.data.pigName }}</td>
+        <td>{{ pig.data.time }}</td>
+        <td>MORE INFO</td>
+        <td><app-button text="Delete" (btnClick)="deletePig(pig)"></app-button></td>
     </tr>
 </table>

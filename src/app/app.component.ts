@@ -18,17 +18,15 @@ export class AppComponent {
   - make a sorting for the data in the table
   
   - change structure of interface of pig
-      - add pig id
-      - change location
-          - name, long, lat (maybe make an interface for this)
       - date and time
+      - find out how to change the thing in the storage API
 
   - make form
-      - FIXME: implement routing
       - implement add new location
       - make this work
 
   - add location to the map
+      - storage API too
 
   - add password to delete button
 */
