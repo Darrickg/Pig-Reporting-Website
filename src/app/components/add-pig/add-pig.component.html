@@ -8,13 +8,18 @@
 
         <label>
             Phone Number:<br>
-            <input type="text" formControlName="reporterNum">
+            <input type="text" formControlName="phoneNum">
         </label><br>
-        <app-button text="submit" (btnClick)="onSubmit()"></app-button>
+        <input type="submit" value="Submit">
     </div>
 
     <div class="pigInfo">
         <h2>Pig Info</h2>
+        <label>
+            ID:<br>
+            <input type="text" formControlName="pId"><br>
+        </label>
+
         <label>
             Name:<br>
             <input type="text" formControlName="pigName"><br>
@@ -33,7 +38,7 @@
         <label>
             Location:<br>
             <select formControlName="location">
-
+                <option value="Metrotown">Metrotown</option>
             </select><br>
         </label>
 

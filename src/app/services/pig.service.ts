@@ -38,4 +38,8 @@ export class PigService implements OnInit {
     const url = `${this.apiUrl}/${pig.key}`;
     return this.http.put<Pig>(url, pig , httpOptions);
   }
+
+  insertPig(pig: Pig): Observable<Pig> {
+    return this.http.post<Pig>(this.apiUrl, pig);
+  }
 }
