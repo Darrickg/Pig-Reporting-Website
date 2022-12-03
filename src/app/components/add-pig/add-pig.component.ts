@@ -14,7 +14,7 @@ import { PigService } from '../../services/pig.service'
 export class AddPigComponent implements OnInit {
 
   pigForm!: FormGroup;
-  newPig!: Pig;
+  // newPig!: Pig;
 
   // reporterName!: string;
   // phoneNum!: string;
@@ -54,29 +54,30 @@ export class AddPigComponent implements OnInit {
    onSubmit(): void {
     console.log("submit button clicked");
     console.log(this.pigForm);
-    // console.log(this.pigForm.get('reporterName')!.value);
-    // this.router.navigateByUrl('/');
-    this.newPig.key = (Math.random() * (999 - 100) + 100).toString();
-    // this.newPig.key = "107";
-    this.newPig.data.reporterName = this.pigForm.get('reporterName')!.value;
-    this.newPig.data.reporterNum = this.pigForm.get('phoneNum')!.value;
 
-    this.newPig.data.pId = this.pigForm.get('pId')!.value;
-    this.newPig.data.pigName = this.pigForm.get('pigName')!.value;
-    this.newPig.data.pigBreed = this.pigForm.get('pigBreed')!.value;
+    const newPig: Pig = {
+      key: (Math.round((Math.random() * (999 - 100) + 100))).toString(),
+      // key: "400",
 
-    this.newPig.data.note = this.pigForm.get('note')!.value;
+      data: {
+        reporterName: this.pigForm.get('reporterName')!.value,
+        reporterNum: this.pigForm.get('phoneNum')!.value,
+        pigName: this.pigForm.get('pigName')!.value,
+        pigBreed: this.pigForm.get('pigBreed')!.value,
+        pId: this.pigForm.get('pId')!.value,
+        location: {
+            locName: this.pigForm.get('location')!.value,
+            locLong: 1,
+            locLat: 1
+        },
+        note: this.pigForm.get('note')!.value,
+        time: (new Date()).toString(),
+        status: false
+      }
+    }
 
-    this.newPig.data.location.locName = this.pigForm.get('location')!.value;
-    this.newPig.data.location.locLat = 1;
-    this.newPig.data.location.locLong = 1;
-
-    this.newPig.data.status = false;
-    this.newPig.data.time = (new Date()).toString();
-
-    this.pigService.insertPig(this.newPig).subscribe();
-
-    console.log(this.newPig);
+    console.log(newPig);
+    this.pigService.insertPig(newPig).subscribe();
 
     this.router.navigateByUrl('/');
    }
