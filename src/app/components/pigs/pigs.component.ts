@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import {Sort} from '@angular/material/sort';
+import {MatTableModule} from '@angular/material/table';
 
 // TODO: REMOVE THIS LATER, THIS NEEDS TO COME FROM THE API, ALSO MOVED TO THE SERVICE LMAO
 import {Pig} from '../../Pig';
@@ -16,6 +17,9 @@ export class PigsComponent implements OnInit{
   @Output() onDeletePig: EventEmitter<Pig> = new EventEmitter();
   @Output() onToggleStatus: EventEmitter<Pig> = new EventEmitter();
   pigs: Pig[] = [];
+
+  dataSource = this.pigs;
+  displayedColumns: string[] = ['location', 'name', 'time', 'status'];
 
   constructor(private pigService: PigService) { }
 
