@@ -1,0 +1,20 @@
+<button (click)="goBack()">BACK</button>
+<div *ngFor="let pig of pigs" class="pig">
+    <h1>More Info on {{pig.data.pigName}}</h1>
+    <div>
+        <h3>Pig Info:</h3>
+        <p>
+        id: {{ pig.data.pId }}<br>
+        breed: {{ pig.data.pigBreed }}<br>
+        location: {{ pig.data.location.locName }}<br>
+        time: {{ pig.data.time }}<br>
+        note: {{ pig.data.note }}<br><br>
+        </p>
+
+        <h3>Reporter Info:</h3>
+        <p>
+            name: {{ pig.data.reporterName }}<br>
+            phone number: {{ pig.data.reporterNum }}<br>
+        </p>
+    </div>
+</div>

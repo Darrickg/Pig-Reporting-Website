@@ -23,7 +23,7 @@ export class LocsService {
     return this.http.get<Loc[]>(this.apiUrl);
   }
 
-  updateLocStatus(loc: Loc): Observable<Loc> {
+  updateLocCount(loc: Loc): Observable<Loc> {
     const url = `${this.apiUrl}/${loc.key}`;
     return this.http.put<Loc>(url, loc, httpOptions);
   }

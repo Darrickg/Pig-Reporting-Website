@@ -10,7 +10,9 @@
             Phone Number:<br>
             <input type="text" formControlName="phoneNum">
         </label><br>
-        <input type="submit" value="Submit" class="btn">
+        <input type="submit" value="Submit" class="btn"><br>
+        <app-button text="new location" (btnClick)="toggleAddLoc()"></app-button><br><br>
+        <app-button text="return" (btnClick)="return()"></app-button>
     </div>
 
     <div class="pigInfo">
@@ -37,8 +39,8 @@
 
         <label>
             Location:<br>
-            <select formControlName="location">
-                <option value="Metrotown">Metrotown</option>
+            <select formControlName="location" [(ngModel)]="loc">
+                <option *ngFor="let loc of locs" [ngValue]="loc">{{ loc.data.name }} </option>
             </select><br>
         </label>
 

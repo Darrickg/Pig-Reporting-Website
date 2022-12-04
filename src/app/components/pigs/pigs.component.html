@@ -7,9 +7,9 @@
         <th>More Info</th>
         <th>Delete</th>
     </tr> -->
-<div class="container">
+<!-- <div class="container">
     <app-pig-item *ngFor="let pig of pigs" [pig]="pig" (onDeletePig)="deletePig(pig)" (onToggleStatus)="toggleStatus(pig)"></app-pig-item>
-</div>
+</div> -->
 
 <table>
     <tr>
@@ -19,39 +19,19 @@
         <th>Status</th>
         <th></th>
         <th></th>
+        <th></th>
     </tr>
     <tr *ngFor="let pig of pigs">
         <td>{{ pig.data.location.locName }}</td>
         <td>{{ pig.data.reporterName }}</td>
         <td>{{ pig.data.time }}</td>
-        <td>{{ pig.data.status }}</td>
-        <td>MORE INFO</td>
+        <td>
+          <div *ngIf="pig.data.status;then valid else not_valid"></div>
+          <ng-template #valid>RETRIEVED</ng-template>
+          <ng-template #not_valid>READY FOR PICKUP</ng-template>
+        </td>
+        <td><app-button text="MORE INFO" (btnClick)="openDialog(pig)"></app-button></td>
+        <Td><app-button text="Edit Status" (btnClick)="toggleStatus(pig)"></app-button></Td>
         <td><app-button text="Delete" (btnClick)="deletePig(pig)"></app-button></td>
     </tr>
 </table>
-
-<!-- <table mat-table [dataSource]="pigs">
-  
-    <ng-container matColumnDef="location">
-      <th mat-header-cell *matHeaderCellDef> Location </th>
-      <td mat-cell *matCellDef="let pig"> {{ pig.data.location.locName }} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="reporterName">
-      <th mat-header-cell *matHeaderCellDef> Reported By </th>
-      <td mat-cell *matCellDef="let pig"> {{ pig.data.reporterName }} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="time">
-      <th mat-header-cell *matHeaderCellDef> Time Reported </th>
-      <td mat-cell *matCellDef="let pig"> {{ pig.data.time }} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="status">
-      <th mat-header-cell *matHeaderCellDef> Status </th>
-      <td mat-cell *matCellDef="let pig"> {{ pig.data.status }} </td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table> -->

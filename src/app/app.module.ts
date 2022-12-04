@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router'
 import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,11 +15,13 @@ import { PigItemComponent } from './components/pig-item/pig-item.component';
 import { MapComponent } from './components/map/map.component';
 import { AddPigComponent } from './components/add-pig/add-pig.component';
 import { AddMapComponent } from './components/add-map/add-map.component';
+import { InfoPopupComponent } from './components/info-popup/info-popup.component';
 
 const appRoutes: Routes = [
   {path: '', component: PigsComponent},
   {path: 'add-pig', component: AddPigComponent},
-  {path: 'add-map', component: AddMapComponent}
+  {path: 'add-map', component: AddMapComponent},
+  {path: 'more-info', component: InfoPopupComponent}
 ]
 
 @NgModule({
@@ -30,7 +33,8 @@ const appRoutes: Routes = [
     PigItemComponent,
     MapComponent,
     AddPigComponent,
-    AddMapComponent
+    AddMapComponent,
+    InfoPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
-    MatTableModule
+    MatTableModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

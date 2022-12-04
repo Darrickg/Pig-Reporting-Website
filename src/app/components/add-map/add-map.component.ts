@@ -47,4 +47,8 @@ export class AddMapComponent implements OnInit {
     this.locsService.insertLoc(newLoc).subscribe();
     this.router.navigateByUrl('/add-pig');
   }
+
+  return(): void {
+    this.router.navigateByUrl('/');
+  }
 }
