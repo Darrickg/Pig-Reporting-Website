@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleAddPig() {
-    this.router.navigateByUrl('/add');
+    this.router.navigateByUrl('/add-pig');
   }
 
 }

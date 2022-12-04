@@ -8,7 +8,8 @@ export interface Loc {
         */
 
         name: string;
-        long: number;
         lat: number;
+        long: number;
+        count: number;
     }
 }  

@@ -14,28 +14,10 @@ import { PigService } from '../../services/pig.service'
 export class AddPigComponent implements OnInit {
 
   pigForm!: FormGroup;
-  // newPig!: Pig;
-
-  // reporterName!: string;
-  // phoneNum!: string;
-  // pigName!: string;
-  // pigBreed!: string;
-  // location!: Loc | undefined;
-  // note!: string;
-  // date!: string;
-  // status: boolean = false;
 
   constructor(private fb: FormBuilder, private router: Router, private pigService: PigService) { }
 
   ngOnInit() {
-    // this.pigForm = new FormGroup({
-    //   reporterName: new FormControl(null),
-    //   phoneNum: new FormControl(null),
-    //   pigName: new FormControl(null),
-    //   pigBreed: new FormControl(null),
-    //   location: new FormControl(null),
-    //   note: new FormControl(null),
-    // });
     this.initialiseForm();
    }
 

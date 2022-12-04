@@ -13,10 +13,12 @@ import { PigsComponent } from './components/pigs/pigs.component';
 import { PigItemComponent } from './components/pig-item/pig-item.component';
 import { MapComponent } from './components/map/map.component';
 import { AddPigComponent } from './components/add-pig/add-pig.component';
+import { AddMapComponent } from './components/add-map/add-map.component';
 
 const appRoutes: Routes = [
   {path: '', component: PigsComponent},
-  {path: 'add', component: AddPigComponent}
+  {path: 'add-pig', component: AddPigComponent},
+  {path: 'add-map', component: AddMapComponent}
 ]
 
 @NgModule({
@@ -27,7 +29,8 @@ const appRoutes: Routes = [
     PigsComponent,
     PigItemComponent,
     MapComponent,
-    AddPigComponent
+    AddPigComponent,
+    AddMapComponent
   ],
   imports: [
     BrowserModule,

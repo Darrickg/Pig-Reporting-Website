@@ -1,0 +1,21 @@
+<div class="form">
+    <form [formGroup]="locForm" (ngSubmit)="onSubmit()">
+        <h2>Location Info</h2>
+        <label>
+            Name:<br>
+            <input type="text" formControlName="locName"><br>
+        </label>
+
+        <label>
+            Latitude:<br>
+            <input type="text" formControlName="lat"><br>
+        </label>
+
+        <label>
+            Longitude:<br>
+            <input type="text" formControlName="long"><br>
+        </label>
+
+        <input type="submit" value="Submit" class="btn">
+    </form>
+</div>
