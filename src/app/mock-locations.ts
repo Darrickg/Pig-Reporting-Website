@@ -6,7 +6,8 @@ export const LOCS: Loc[] = [
         "data": {
             "name": "Metrotown",
             "long": 49.2276,
-            "lat": -123.0076
+            "lat": -123.0076,
+            "count": 0,
         }
     },
     {
@@ -14,7 +15,8 @@ export const LOCS: Loc[] = [
         "data": {
             "name": "SFU Surrey",
             "long": 49.1867,
-            "lat": -122.8490
+            "lat": -122.8490,
+            count: 0,
         }
     }
 ]
