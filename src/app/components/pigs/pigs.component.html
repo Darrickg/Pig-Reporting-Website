@@ -13,10 +13,10 @@
 
 <table>
     <tr>
-        <th>Location</th>
-        <th>Reported By</th>
-        <th>Time Reported</th>
-        <th>Status</th>
+        <th><app-button text="Location" (btnClick)="sortByLoc(pigs)"></app-button></th>
+        <th><app-button text="Reported By" (btnClick)="sortByReporter(pigs)"></app-button></th>
+        <th><app-button text="Time Reported" (btnClick)="sortByTime(pigs)"></app-button></th>
+        <th><app-button text="Status" (btnClick)="sortByStatus(pigs)"></app-button></th>
         <th></th>
         <th></th>
         <th></th>

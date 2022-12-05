@@ -34,8 +34,8 @@ export class MapComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
 
-    this.locsService.getLocs().subscribe((locs) => {this.locs = locs
-    console.log(this.locs[0].data)})
+    // this.locsService.getLocs().subscribe((locs) => {this.locs = locs
+    // console.log(this.locs[0].data)})
 
     this.map = L.map('mapid').setView([49.2, -123], 11);
 
@@ -48,6 +48,17 @@ export class MapComponent implements AfterViewInit {
       zoomOffset: -1
     }).addTo(this.map);
 
+    this.locsService.getLocs().subscribe((locs) => {this.locs = locs
+      console.log(this.locs[0].data)
+      for (let i = 0; i < this.locs.length; i++)
+    {
+      console.log("this is working")
+      console.log(this.locs[i].data.name);
+      L.marker([this.locs[i].data.lat, this.locs[i].data.long]).addTo(this.map)
+      .bindPopup(`<b>${this.locs[i].data.name}</b><br />${this.locs[i].data.count} cases reported.`).openPopup();
+    }
+    })
+
     
     // L.marker([49.2276, -123.0076]).addTo(this.map)
     // .bindPopup("<b>Metrotown</b><br />cases reported.").openPopup();
@@ -56,14 +67,13 @@ export class MapComponent implements AfterViewInit {
 
     console.log("this is working");
 
-    for (let i = 0; i < this.locs.length; i++)
-    {
-      console.log("this is working")
-      console.log(this.locs[i].data.name);
-      L.marker([this.locs[i].data.lat, this.locs[i].data.long]).addTo(this.map)
-    .bindPopup("<b>{{ this.locs[i].data.name }}</b><br />{{ this.locs[i].data.count }} cases reported.").openPopup();
-    }
-
+    // for (let i = 0; i < this.locs.length; i++)
+    // {
+    //   console.log("this is working")
+    //   console.log(this.locs[i].data.name);
+    //   L.marker([this.locs[i].data.lat, this.locs[i].data.long]).addTo(this.map)
+    // .bindPopup("<b>{{ this.locs[i].data.name }}</b><br />{{ this.locs[i].data.count }} cases reported.").openPopup();
+    // }
   }
 
 }
