@@ -1,4 +1,4 @@
-<button (click)="goBack()">BACK</button>
+<!-- <button (click)="goBack()">BACK</button>
 <div *ngFor="let pig of pigs" class="pig">
     <h1>More Info on {{pig.data.pigName}}</h1>
     <div>
@@ -16,5 +16,27 @@
             name: {{ pig.data.reporterName }}<br>
             phone number: {{ pig.data.reporterNum }}<br>
         </p>
+    </div>
+</div> -->
+<div class="everything">
+    <h1 mat-dialog-title> More info on {{ data.name }}</h1>
+    <div mat-dialog-content>
+        <h3>Pig Info:</h3><br>
+        <p>
+        id: {{ data.pId }}<br>
+        breed: {{ data.pigBreed }}<br>
+        location: {{ data.locName }}<br>
+        time: {{ data.time }}<br>
+        note: {{ data.note }}<br><br>
+        </p>
+
+        <h3>Reporter Info:</h3><br>
+        <p>
+            name: {{ data.reporterName }}<br>
+            phone number: {{ data.reporterNum }}<br>
+        </p>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="exit()">Back</button>
     </div>
 </div>

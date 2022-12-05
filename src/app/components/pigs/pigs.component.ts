@@ -1,12 +1,29 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Inject, InjectionToken, Input, OnInit, Output } from '@angular/core';
 import {Pig} from '../../Pig';
 import { PigService } from '../../services/pig.service';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { InfoPopupComponent } from '../info-popup/info-popup.component';
 import { Router } from '@angular/router'
 import { BehaviorSubject } from 'rxjs';
 import { Loc } from 'src/app/Loc';
 import { LocsService } from 'src/app/services/locs.service';
+import { PasswordComponent } from 'src/app/password/password.component';
+
+
+export interface DialogData {
+  name: string,
+  pId: string,
+  pigBreed: string,
+  locName: string,
+  time: string,
+  note: string,
+  reporterName: string,
+  reporterNum: string
+}
+
+export interface PasswordData {
+  password: string;
+}
 
 @Component({ 
   selector: 'app-pigs',
@@ -20,6 +37,7 @@ export class PigsComponent implements OnInit{
   @Output() onToggleStatus: EventEmitter<Pig> = new EventEmitter();
   pigs: Pig[] = [];
   locs: Loc[] = [];
+  password: string = '';
   // display: string = 'BEFORE';
   // private pigSource = new BehaviorSubject<Pig>(this.pig);
   // currentPig = this.pigSource.asObservable()
@@ -53,9 +71,21 @@ export class PigsComponent implements OnInit{
     // console.log(pig.data.status);
   }
 
-  openDialog(pig: Pig) {
-    this.router.navigateByUrl('/more-info');
-    // this.dialogRef.open(InfoPopupComponent);
+  openDialog(pig: Pig): void {
+    const dialogRef = this.dialogRef.open(InfoPopupComponent, {
+      height: 'fit',
+      width: '500px',
+      data: {
+        name: pig.data.pigName,
+        pId: pig.data.pId,
+        pigBreed: pig.data.pigBreed,
+        locName: pig.data.location.locName,
+        time: pig.data.time,
+        note: pig.data.note,
+        reporterName: pig.data.reporterName,
+        reporterNum: pig.data.reporterNum
+      }
+    });
   }
 
   sortByLoc(pigs: Pig[]): void {

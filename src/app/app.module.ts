@@ -16,12 +16,14 @@ import { MapComponent } from './components/map/map.component';
 import { AddPigComponent } from './components/add-pig/add-pig.component';
 import { AddMapComponent } from './components/add-map/add-map.component';
 import { InfoPopupComponent } from './components/info-popup/info-popup.component';
+import { PasswordComponent } from './password/password.component';
+import { MatRippleModule } from '@angular/material/core';
 
 const appRoutes: Routes = [
   {path: '', component: PigsComponent},
   {path: 'add-pig', component: AddPigComponent},
   {path: 'add-map', component: AddMapComponent},
-  {path: 'more-info', component: InfoPopupComponent}
+  // {path: 'more-info', component: InfoPopupComponent}
 ]
 
 @NgModule({
@@ -34,7 +36,8 @@ const appRoutes: Routes = [
     MapComponent,
     AddPigComponent,
     AddMapComponent,
-    InfoPopupComponent
+    InfoPopupComponent,
+    PasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +49,6 @@ const appRoutes: Routes = [
     MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
