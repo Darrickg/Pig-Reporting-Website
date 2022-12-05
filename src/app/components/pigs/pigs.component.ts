@@ -7,7 +7,6 @@ import { Router } from '@angular/router'
 import { BehaviorSubject } from 'rxjs';
 import { Loc } from 'src/app/Loc';
 import { LocsService } from 'src/app/services/locs.service';
-import { PasswordComponent } from 'src/app/password/password.component';
 
 
 export interface DialogData {

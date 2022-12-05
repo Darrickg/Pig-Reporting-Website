@@ -16,8 +16,6 @@ import { MapComponent } from './components/map/map.component';
 import { AddPigComponent } from './components/add-pig/add-pig.component';
 import { AddMapComponent } from './components/add-map/add-map.component';
 import { InfoPopupComponent } from './components/info-popup/info-popup.component';
-import { PasswordComponent } from './password/password.component';
-import { MatRippleModule } from '@angular/material/core';
 
 const appRoutes: Routes = [
   {path: '', component: PigsComponent},
@@ -36,8 +34,7 @@ const appRoutes: Routes = [
     MapComponent,
     AddPigComponent,
     AddMapComponent,
-    InfoPopupComponent,
-    PasswordComponent
+    InfoPopupComponent
   ],
   imports: [
     BrowserModule,
