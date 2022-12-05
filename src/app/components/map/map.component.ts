@@ -58,22 +58,6 @@ export class MapComponent implements AfterViewInit {
       .bindPopup(`<b>${this.locs[i].data.name}</b><br />${this.locs[i].data.count} cases reported.`).openPopup();
     }
     })
-
-    
-    // L.marker([49.2276, -123.0076]).addTo(this.map)
-    // .bindPopup("<b>Metrotown</b><br />cases reported.").openPopup();
-    L.marker([49.1867, -122.8490]).addTo(this.map)
-    .bindPopup("<b>SFU Surrey</b><br />cases reported.").openPopup();
-
-    console.log("this is working");
-
-    // for (let i = 0; i < this.locs.length; i++)
-    // {
-    //   console.log("this is working")
-    //   console.log(this.locs[i].data.name);
-    //   L.marker([this.locs[i].data.lat, this.locs[i].data.long]).addTo(this.map)
-    // .bindPopup("<b>{{ this.locs[i].data.name }}</b><br />{{ this.locs[i].data.count }} cases reported.").openPopup();
-    // }
   }
 
 }
