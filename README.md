@@ -1,9 +1,7 @@
 # Pig Reporter
 
 ## About
-```
 This project is a website that allows users to report pig sightings. Said sightings will then show up on the map.
-```
 
 ## Technologies
 ```
