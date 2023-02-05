@@ -1,4 +1,15 @@
-# CMPT272Project
+# Pig Reporter
+
+## About
+```
+This project is a website that allows users to report pig sightings. Said sightings will then show up on the map.
+```
+
+## Technologies
+```
+- Angular
+- Typescript
+```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
 
